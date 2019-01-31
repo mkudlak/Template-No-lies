@@ -1,0 +1,16 @@
+.action {
+  background-color: $dark-bg;
+  color: $white;
+  margin-bottom: 50px;
+
+  .container>.fw-main-row>.fw-container>.fw-row {
+    .fw-col-sm-4 {
+
+      .fw-btn,
+      .fw-btn-1 {
+        @include button;
+        margin: 10px 60px;
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.top-slider {
+  z-index: -3;
+  .div#n2-ss-2 .n2-style-1101-heading {
+    background: none;
+  }
+  .n2-ss-button-container .n2-style-1101-heading div {
+    @include button;
+    background-color: $dark-bg;
+    color:$white;
+    &:hover {
+      @include hover-button;
+    }
+  }
+}

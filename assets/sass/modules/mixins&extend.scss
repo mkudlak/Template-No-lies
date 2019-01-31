@@ -1,0 +1,161 @@
+//IMPORT FONTS
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+
+
+//Centering and positionning
+.center-text {
+  text-align: center;
+}
+
+@mixin v-align {
+  vertical-align: middle;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.inline {
+  display: inline;
+}
+
+.block {
+  display: block;
+}
+
+@mixin padding($t, $r, $b, $l) {
+  padding: $t, $r, $b, $l;
+}
+
+@mixin relative {
+  position: relative;
+}
+
+@mixin absolute {
+  position: absolute;
+}
+
+@mixin absolute-0000 {
+  @include absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.v-align-transform {
+  @include relative;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+}
+
+.h-align-transform {
+  @include relative;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+@mixin basic-transition {
+  transition: all 0.6s ease-in-out;
+  -webkit-transition: all 0.6s ease-in-out;
+  -moz-transition: all 0.6s ease-in-out;
+  -ms-transition: all 0.6s ease-in-out;
+  -o-transition: all 0.6s ease-in-out;
+}
+
+//DEFAULT MIXINS
+@mixin bg-c($bg-color, $color) {
+  background-color: $bg-color;
+  color: $color;
+}
+
+@mixin basic-text($size, $l-height, $letter-spacing) {
+  font-size: $size;
+  line-height: $l-height;
+  letter-spacing: $letter-spacing;
+}
+
+@mixin size($w, $h) {
+  width: $w;
+  height: $h;
+}
+
+@mixin upper {
+  text-transform: uppercase;
+}
+
+@mixin pointer {
+  cursor: pointer
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin uppercase-bolder($bold) {
+  font-weight: $bold;
+  text-transform: uppercase;
+}
+
+@mixin box-shadow {
+  box-shadow: -6px 11px 29px rgba(21, 53, 52, 0.14);
+}
+
+//BUTTON DEFAULT
+@mixin button {
+  background-color: $red;
+  color: $white;
+  border: 1px solid $red;
+  padding: 10px 20px;
+  @include uppercase-bolder(800);
+  @include pointer;
+  @include basic-transition;
+  font-weight: 400;
+  font-size: 14px;
+  text-align: center;
+  font-family: $font-base;
+  letter-spacing: 0.15em;
+  margin: 0 auto;
+}
+
+//HOVER EFFECT BASIC
+@mixin hover-links {
+  @include pointer;
+  border-bottom: 1px solid $red;
+  padding-bottom: 15px;
+}
+
+//HOVER EFFECT FOR BUTTON
+@mixin hover-button {
+  background-color: $button-hover;
+  color: $white;
+  border-radius: 50px;
+}
+
+//FOR ICONS
+@mixin icon {
+  color: $white;
+  background-color: $red;
+  border-radius: 50%;
+  font-size: 40px;
+  height: 100px;
+  width: 100px;
+}
+
+//FLEX
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-content: $align;
+}

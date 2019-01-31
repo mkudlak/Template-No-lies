@@ -1,0 +1,243 @@
+/*Import global modules parts*/
+@import 'modules/reset.scss';
+@import 'modules/mixins&extend.scss';
+@import 'modules/variables.scss';
+
+/*Import specific partial parts*/
+@import 'partials/site-navigation.scss';
+@import 'partials/top-slider.scss';
+@import 'partials/three-elements.scss';
+@import 'partials/info.scss';
+@import 'partials/strengths.scss';
+@import 'partials/action.scss';
+@import 'partials/footer.scss';
+
+@import 'partials/page.scss';
+@import 'partials/404.scss';
+
+/*GLOBAL*/
+body {
+  font-family: $font-base;
+  background-color: $light-bg;
+  font-weight: 400;
+}
+
+p {
+  font-size: $base-p-size;
+  @include basic-text($base-p-size, 22px, null);
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $text-heading-color;
+  margin-bottom: 30px;
+}
+
+h1 {
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover {
+    text-decoration: none;
+  }
+
+  &:active {
+    text-decoration: none;
+  }
+
+  &:focus {
+    text-decoration: none;
+  }
+
+  &:visited {
+    color: black;
+  }
+}
+
+.section-padding {
+  padding: 50px 0;
+}
+
+.fw-btn,
+.fw-btn-1 {
+  @include button;
+
+  &:hover {
+    @include hover-button
+  }
+}
+
+/*MEDIA QUERIES*/
+
+@media all and (max-width: 1690px) {
+  header #site-navigation {
+    .menu-menu-1-container ul {
+      li {
+        margin-right: 0;
+
+        a {
+          padding: 30px 10px;
+        }
+      }
+    }
+  }
+
+  .strengths {
+    margin-bottom: 50px;
+
+    .container>.fw-main-row>.fw-container {
+      padding: 0;
+
+      .fw-row {
+        .fw-col-sm-6:nth-child(2) {
+          width: 65%;
+          padding: 20px 40px;
+          position: absolute;
+          top: -70px;
+          right: 100px;
+
+          h5 {
+            color: $white;
+            margin-left: 50px;
+          }
+        }
+      }
+
+      .fw-row:nth-child(2)>.fw-col-sm-6 {
+        width: 55%;
+        position: absolute;
+        top: 38%;
+        left: 45%;
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 980px) {
+  .three-elements>.container>.fw-main-row>.fw-container>.fw-row:nth-child(3)>.fw-col-sm-3 {
+    padding: 10px;
+  }
+
+  .strengths {
+    .container>.fw-main-row>.fw-container {
+      width: 100%;
+      padding: 0;
+
+      .fw-row {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        .fw-col-sm-6 {
+          display: block;
+        }
+
+        .fw-col-sm-6:nth-child(1) {
+          margin-top: 0;
+          display: block;
+          align-self: center;
+        }
+
+        .fw-col-sm-6:nth-child(2) {
+          display: block;
+          width: 100%;
+          position: static;
+        }
+      }
+
+      .fw-row:nth-child(2)>.fw-col-sm-6 {
+        display: block;
+        width: 100%;
+        position: static;
+        margin-top: 20px;
+      }
+    }
+  }
+
+}
+
+@media all and (max-width: 736px) {
+  header #site-navigation {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .top-slider {
+    margin-top: 50px;
+    font-size: 10px;
+
+    /*button from slaider*/
+    .n2-ss-button-container .n2-style-1101-heading div {
+      font-size: 10px;
+    }
+  }
+
+  .three-elements>.container>.fw-main-row>.fw-container {
+    .fw-row:nth-child(1)>.fw-col-xs-12 {
+      p {
+        padding: 0 100px;
+      }
+    }
+
+    .fw-row:nth-child(3) {
+      flex-direction: column;
+
+      .fw-col-sm-3 {
+        margin: 0;
+        padding: 0;
+        margin: 50px 30px;
+
+        .fw-iconbox {
+          margin-top: -80px;
+        }
+
+        .fw-iconbox-text {
+          p {
+            padding: 20px 30px;
+          }
+        }
+      }
+
+      .fw-col-sm-3:nth-child(3) {
+        margin-right: 30px;
+      }
+    }
+  }
+}
+
+
+@media all and (max-width: 480px) {
+  #primary-menu .menu-item {
+    display: block;
+    width: 100%;
+    text-align: center;
+  }
+
+  .three-elements>.container>.fw-main-row>.fw-container {
+    .fw-row:nth-child(1)>.fw-col-xs-12 {
+      p {
+        padding: 0 30px;
+      }
+    }
+  }
+
+  .site-footer {
+    #nav_menu-2>.menu-menu-1-container {
+      .menu {
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+      }
+    }
+  }
+}

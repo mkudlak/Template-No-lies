@@ -1,0 +1,36 @@
+.site-footer {
+  background-color: $footer-bg;
+
+  #nav_menu-2>.menu-menu-1-container>.menu {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+
+    .menu-item {
+      margin: 20px;
+
+      a {
+        color: $white;
+
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+
+  .site-info {
+    background-color: black;
+    padding: 10px;
+    color: #626262;
+    text-align: center;
+
+    a {
+      color: #626262;
+
+      &:hover {
+        color: $red;
+      }
+    }
+  }
+}

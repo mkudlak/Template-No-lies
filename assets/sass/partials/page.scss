@@ -1,0 +1,85 @@
+/*Page header*/
+.entry-header {
+  position: relative;
+
+  .entry-img {
+    padding: 50px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: top center;
+
+    .entry-title-header {
+      text-align: center;
+      color: $text-main-color;
+      @include uppercase-bolder(700)
+    }
+  }
+}
+
+/*Blog*/
+#primary {
+  background-image: url('assets/images/section-background.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+/*Contact*/
+#main {
+  text-align: center;
+  width: 100%;
+  margin: 0 auto;
+
+  #post-62 {
+    .entry-content {
+      width: 50%;
+      margin: auto;
+    }
+  }
+}
+
+.fw-page-builder-content {
+  .fw-container {
+    width: 100%;
+    padding: 0;
+  }
+
+  .fw-special-title {
+    @include uppercase-bolder(700);
+  }
+
+  .fw-row:nth-child(2) {
+    background-color: $light-bg;
+    padding: 20px;
+
+    .fw-icon {
+      height: 100px;
+      width: 100px;
+      border: 2px solid $red;
+      border-radius: 50%;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-weight: bolder;
+      margin: 0;
+    }
+  }
+
+  .form-wrapper {
+    input[type="submit"] {
+      @include button;
+      margin-bottom: 20px;
+    }
+  }
+
+  .fw-row:nth-child(4) {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+
+    .fw-col-xs-12 {
+      padding: 0;
+    }
+  }
+}

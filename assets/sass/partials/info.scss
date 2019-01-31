@@ -1,0 +1,15 @@
+.info {
+  background-color: $light-bg;
+
+  .container>.fw-main-row>.fw-container>.fw-row>.fw-col-xs-12 {
+    .fw-heading-h1 {
+      @include uppercase-bolder(700);
+      color: $text-heading-color;
+    }
+
+    p {
+      color: $text-main-color;
+      font-size: $base-size;
+    }
+  }
+}

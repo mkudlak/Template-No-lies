@@ -1,0 +1,77 @@
+.three-elements {
+  background-image: url('assets/images/section-background.png');
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  .container {
+    .fw-main-row > .fw-container {
+      width: 100%;
+      text-align: center;
+      .fw-row:nth-child(1) {
+        width: 100%;
+        margin: 0 auto;
+        .fw-col-xs-12 {
+          text-align: center;
+          p {
+            padding: 0 200px;
+            text-align: left;
+          }
+          .fw-btn-1 {
+            @include button;
+            margin-top: 30px;
+            margin-bottom: 100px;
+            text-align: center;
+            &:hover {
+              @include hover-button;
+            }
+          }
+        }
+      }
+      .fw-row:nth-child(2) {
+        background-color: $light-bg;
+        width: 100%;
+      }
+      .fw-row:nth-child(3) {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding-bottom: 50px;
+        .fw-col-sm-3 {
+          background-color: $dark-bg;
+          color: $text-articles-paragraph-color;
+          margin-right: 30px;
+          margin-top: -140px;
+          padding: 40px;
+        }
+        .fw-col-sm-3:nth-child(2) {
+          .fw-btn-1 {
+            @include button;
+            margin-bottom: 20px;
+            text-align: center;
+            &:hover {
+              @include hover-button;
+            }
+          }
+        }
+        .fw-col-sm-3:nth-child(3) {
+          margin-right: 0;
+        }
+        .fw-iconbox {
+          margin-top: -125px;
+          .fw-iconbox-image {
+            margin-bottom: 100px;
+            @include icon;
+            i {
+              font-size: 50px;
+              padding: 25px;
+            }
+          }
+          .fw-iconbox-title h3{
+            color: $white;
+            @include uppercase-bolder(700);
+          }
+        }
+      }
+    }
+  }
+}

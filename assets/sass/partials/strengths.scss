@@ -1,0 +1,78 @@
+.strengths {
+  background-color: $white;
+  position: relative;
+
+  .container>.fw-main-row>.fw-container>.fw-row {
+    margin: 0;
+
+    .fw-col-sm-6 {
+      margin: 0;
+      padding: 0;
+    }
+
+    .fw-col-sm-6:nth-child(1) {
+      margin-top: -100px;
+    }
+
+    .fw-col-sm-6:nth-child(2) {
+      background-color: $dark-bg;
+      color: $white;
+      width: 75%;
+      padding: 20px 40px;
+      position: absolute;
+      top: 0;
+      right: -150px;
+
+      h5 {
+        color: $white;
+        margin-left: 50px;
+      }
+    }
+  }
+
+  .fw-row:nth-child(2)>.fw-col-sm-6 {
+    background-color: $dark-bg;
+    width: 65%;
+    position: absolute;
+    top: 42%;
+    left: 45%;
+
+    .fw-iconbox {
+      padding: 20px 40px;
+      display: flex;
+
+      .fw-iconbox-image {
+        @include icon;
+        background-color: transparent;
+        border: 3px solid $red;
+        height: 60px;
+        width: 60px;
+
+        i {
+          font-size: 27px;
+          padding: 15px;
+        }
+      }
+    }
+
+    .fw-iconbox-aside {
+      margin-left: 70px;
+
+      .fw-iconbox-title {
+        height: auto;
+
+        h3 {
+          text-align: left;
+          color: $white;
+          font-size: 18px;
+        }
+      }
+
+      .fw-iconbox-text {
+        p {
+          color: $text-articles-paragraph-color;
+        }
+      }
+    }
+  }
+}
